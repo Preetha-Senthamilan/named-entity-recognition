@@ -6,14 +6,30 @@ To develop an LSTM-based model for recognizing the named entities in the text.
 
 ## Problem Statement and Dataset
 
+This project aims to implement an LSTM-based model for named entity recognition (NER) in text, targeting the identification of entities like persons, organizations, and locations. By leveraging deep learning techniques, we seek to develop a robust system capable of accurately labeling named entities in unstructured text data.
 
 ## DESIGN STEPS
 
 ### STEP 1:
+Import the necessary packages.
 
-### STEP 2:
+### Step 2:
+Read the dataset, and fill the null values using forward fill.
 
-### STEP 3:
+### Step 3:
+Create a list of words, and tags. Also find the number of unique words and tags in the dataset.
+
+### Step 4:
+Create a dictionary for the words and their Index values. Do the same for the tags as well,Now we move to moulding the data for training and testing.
+
+### Step 5:
+We do this by padding the sequences,This is done to acheive the same length of input data.
+
+### Step 6:
+We build a build a model using Input, Embedding, Bidirectional LSTM, Spatial Dropout, Time Distributed Dense Layers.
+
+### Step 7:
+We compile the model and fit the train sets and validation sets,We plot the necessary graphs for analysis, A custom prediction is done to test the model manually.
 
 
 ## PROGRAM
@@ -163,9 +179,16 @@ for w, true, pred in zip(X_test[i], y_true, p[0]):
 
 ### Training Loss, Validation Loss Vs Iteration Plot
 
-Include your plot here
+![Screenshot 2024-10-04 102530](https://github.com/user-attachments/assets/8491ad96-bca8-4de7-a936-d4562c5cf84b)
+
+![Screenshot 2024-10-04 102559](https://github.com/user-attachments/assets/9d171b3b-acf8-464f-a14c-4bcee4cb192a)
+
 
 ### Sample Text Prediction
-Include your sample text prediction here.
+
+![Screenshot 2024-10-04 102740](https://github.com/user-attachments/assets/face824f-62e6-4024-bb5f-2d7477dcd581)
 
 ## RESULT
+
+Thus, an LSTM-based model for recognizing the named entities in the text is successfully developed.
+
